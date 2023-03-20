@@ -8,56 +8,44 @@ import axios from 'axios';
 
 const urlEndpoint = 'http://localhost:3000/blogs';
 
+// inside 'http://localhost:3000/blogs' there's an object called 'blogs' which contains an array of objects with the keys: 'title', 'author', 'text'
+
 // card component
 
-function BlogCard() {
+export default function BlogCard() {
+
     const [blogs, setBlogs] = useState([]);
 
-    // get all blogs
-
-    const getBlogs = () => {
-        axios.get(`${urlEndpoint}/all`).then((res) => {
-            setBlogs(res.data);
-        });
-    };
-
     useEffect(() => {
-        getBlogs();
+
+        axios.get(`${urlEndpoint}/all`).then((response) => {
+
+            setBlogs(response.data.blogs);
+
+        });
+
     }, []);
 
-
-    // delete blog
-
-    const deleteBlog = (title) => {
-        axios.delete(`${urlEndpoint}/delete-one/${title}`).then((res) => {
-            console.log(res);
-        });
-    };
-
-    // update blog
-
-    const updateBlog = (title) => {
-        axios.put(`${urlEndpoint}/update-one/${title}`).then((res) => {
-            console.log(res);
-        });
-    };
-
-    // render blogs
-
     return (
-        <div>
-            {blogs.map((blog) => {
-                return (
-                <div key={blog.title}>
-                    <h1>{blog.title}</h1>
-                    <p>{blog.content}</p>
-                    <button onClick={() => deleteBlog(blog.title)}>Delete</button>
-                    <button onClick={() => updateBlog(blog.title)}>Update</button>
+
+        <div className='blog-card'>
+
+            {blogs.map((blog) => (
+
+                <div key={blog.id}>
+
+                    <h1>{blog.title.toUpperCase()}</h1>
+
+                    <h2>author: {blog.author}</h2>
+
+                    <p>{blog.text}</p>
+
                 </div>
-            )})}
+
+            ))}
+
         </div>
 
     );
-}
 
-export default BlogCard;
+}
