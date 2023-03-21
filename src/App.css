@@ -2,69 +2,52 @@
   text-align: center;
 }
 
-.blog-card {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  /* margin: 60px auto; */
-  max-width: 1000px;
-  /* padding: 50px; */
-  padding-left: 50px;
-  text-align: left;
-  transition: box-shadow 0.5s ease;
-}
-
-/* blog-post component will recpect the nav space and will be more visually attractive than blog-card, it will use Material Design principles for its design */
-
-.blog-post {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  margin: 60px auto;
-  max-width: 1000px;
-  padding: 50px;
-  text-align: left;
-  transition: box-shadow 0.5s ease;
-}
+/* Navigation styles */
 
 nav {
-  background: #fff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
 }
 
-nav > a {
-  color: #000;
-  font-size: 1.2em;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 20px;
-}
-/* this button should appear bellow the nav bar */
-.create-blog-button {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  margin: 60px auto;
-  max-width: 1000px;
-  padding: 20px;
-  text-align: left;
-  transition: box-shadow 0.5s ease;
+nav a {
+  color: white;
 }
 
-/* the form will be bellow the nav bar and will have material design principles */
+nav a:hover {
+  text-decoration: underline;
+}
 
-form {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  margin: 60px auto;
-  max-width: auto;
-  padding: 50px;
-  text-align: left;
-  transition: box-shadow 0.5s ease;
+/* Blog card styles */
+
+.blog-card {
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards onto new line if they don't fit */
+}
+
+.blog-card > div {
+  width: calc(33.33% - (2rem / 3)); /* Three cards per row with some margin */
+  margin-right: calc(2rem / 3);
+}
+
+.blog-card > div:last-child {
+   margin-right: unset; /* Remove right margin from last card in row */
+}
+
+.blog-card h1 {
+   font-size: 1.5rem; /* Larger title font size */
+   margin-bottom: .5rem; /* Add some spacing between title and author */
+}
+
+.blog-card h2 {
+   font-size: .8rem; /* Smaller author font size */
+   color: gray; /* Lighter author text color */
+   margin-bottom: .5rem; /* Add some spacing between author and text */
+}
+
+.blog-card p {
+   font-size: .9rem; /* Slightly smaller text font size */
 }

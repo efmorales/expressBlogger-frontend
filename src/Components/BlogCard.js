@@ -52,7 +52,7 @@ export default function BlogCard() {
 
                     <h2>author: {blog.author}</h2>
 
-                    <p>{blog.text}</p>
+                    {/* <p>{blog.text}</p> */}
 
                 </div>
 
