@@ -1,6 +1,16 @@
 // This component is used to display the blog cards on the blog page (../Pages/Blogs.js)
 
+// each title will be a direct link/route to the blog page
+
+// each blog card will have a delete button
+
+// each blog card will have an edit button
+
+
+
 import { useState, useEffect } from 'react';
+
+import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -26,6 +36,8 @@ export default function BlogCard() {
 
     }, []);
 
+
+
     return (
 
         <div className='blog-card'>
@@ -34,7 +46,9 @@ export default function BlogCard() {
 
                 <div key={blog.id}>
 
-                    <h1>{blog.title.toUpperCase()}</h1>
+                    <Link to={`/blogs/${blog.id}`}>
+                        <h1>{blog.title.toUpperCase()}</h1>
+                    </Link>
 
                     <h2>author: {blog.author}</h2>
 

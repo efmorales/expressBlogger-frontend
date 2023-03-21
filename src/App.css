@@ -13,6 +13,19 @@
   transition: box-shadow 0.5s ease;
 }
 
+/* blog-post component will recpect the nav space and will be more visually attractive than blog-card, it will use Material Design principles for its design */
+
+.blog-post {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 50px;
+  text-align: left;
+  transition: box-shadow 0.5s ease;
+}
+
 nav {
   background: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
