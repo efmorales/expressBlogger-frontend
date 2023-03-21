@@ -6,9 +6,10 @@
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
-  margin: 60px auto;
+  /* margin: 60px auto; */
   max-width: 1000px;
-  padding: 50px;
+  /* padding: 50px; */
+  padding-left: 50px;
   text-align: left;
   transition: box-shadow 0.5s ease;
 }
@@ -43,4 +44,27 @@ nav > a {
   text-decoration: none;
   padding: 20px;
 }
+/* this button should appear bellow the nav bar */
+.create-blog-button {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: left;
+  transition: box-shadow 0.5s ease;
+}
 
+/* the form will be bellow the nav bar and will have material design principles */
+
+form {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
+  margin: 60px auto;
+  max-width: auto;
+  padding: 50px;
+  text-align: left;
+  transition: box-shadow 0.5s ease;
+}
