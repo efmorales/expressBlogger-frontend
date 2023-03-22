@@ -55,7 +55,7 @@ export default function BlogPost() {
   return (
     <div className='blog-post'>
       {editMode ? (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="edit-form">
           <label htmlFor='title'>Title:</label>
           <input type='text' id='title' name='title' defaultValue={blog.title} />
           <label htmlFor='text'>Text:</label>
@@ -74,8 +74,6 @@ export default function BlogPost() {
           <button onClick={handleDelete}>Delete</button>
         </>
       )}
-      
-      {/* TODO: Add delete button */}
       
       {/* TODO: Add category tags */}
       

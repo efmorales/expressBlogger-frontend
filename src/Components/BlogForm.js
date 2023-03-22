@@ -21,7 +21,7 @@ export default function BlogForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="new-form">
       <label htmlFor='title'>Title:</label>
       <input type='text' id='title' name='title' value={formData.title} onChange={(event) => setFormData({ ...formData, title: event.target.value })} />
       <label htmlFor='text'>Text:</label>
