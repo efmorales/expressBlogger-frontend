@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
+import imagePlaceholder from '../Images/Placeholder.png';
+
 //call endpoint to update or delete the blog
 
 const urlEndpoint = 'http://localhost:3000/blogs';
@@ -47,10 +49,11 @@ export default function BlogCard() {
                 <div key={blog.id}>
 
                     <Link to={`/blogs/${blog.id}`}>
-                        <h1>{blog.title.toUpperCase()}</h1>
+                        <img src={imagePlaceholder} alt='blog img' className='blog-img' />
+                        <h1>{blog.title}</h1>
                     </Link>
 
-                    <h2>author: {blog.author}</h2>
+                    <h2>by {blog.author}</h2>
 
                     {/* <p>{blog.text}</p> */}
 

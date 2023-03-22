@@ -4,21 +4,90 @@
 
 /* Navigation styles */
 
-nav {
+/* nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #333;
   color: white;
   padding: 1rem;
+} */
+
+
+.nav-bar{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #333;
+  color: white;
+  /* padding: 1rem; */
+} 
+
+
+*/
+
+.page-banner {
+  height: auto;
+  width: auto;
+}
+
+.nav-bar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #27252F;
+  color: white;
+  height: 100px;
+  padding-left: 125px;
+  padding-right: 125px;
+}
+
+.enzo-link {
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.blogs-link {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 nav a {
   color: white;
+  text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.blog-section{
+  padding-left: 125px;
+}
+
+.blogs-banner {
+  display: flex;
+  
+}
+
+.create-blog-button {
+  margin-top: 20px;
+  margin-left: 45px;
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+}
+
+.create-blog-button > a {
+  text-decoration: none;
+}
+
+.blog-img {
+  width: 250px;
+  height: 250px;
+  margin: 0px;
+  /* object-fit: cover; */
 }
 
 /* Blog card styles */

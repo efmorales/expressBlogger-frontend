@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 
 export default function Blogs() {
     return (
-        <div>
-            <button className='create-blog-button'> 
-            <Link to='/create-blog'>Create Blog</Link>
-            </button>
+        <div className='blog-section'>
+            <div className='blogs-banner'>
+                <h1>Blogs</h1>
+                <button className='create-blog-button'>
+                    <Link to='/create-blog'>Create new blog</Link>
+                </button>
+            </div>
             <BlogCard />
         </div>
     );
