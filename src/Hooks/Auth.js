@@ -65,6 +65,7 @@ export const AuthProvider = ({ children }) => {
     const [userToken, setUserToken] = useState(null);
     const [userEmail, setUserEmail] = useState("");
     const [isAuthLoading, setIsAuthLoading] = useState(false);
+    const [user, setUser] = useState("");
 
     useEffect(() => {
         // get session data if is still active from the browser
@@ -87,8 +88,12 @@ export const AuthProvider = ({ children }) => {
 const login = async (email, password) => {
     setIsAuthLoading(true);
     const loginResult = await loginUser(email, password);
+
+    
     if (loginResult.success) {
         setLSUserData(loginResult.token, email);
+        setUser (loginResult.userID)
+
     }
     setIsAuthLoading(false);
     return loginResult;
@@ -109,6 +114,7 @@ const value = useMemo(() => ({
     register,
     login,
     logout,
+    user,
 }), [userToken]);
 return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

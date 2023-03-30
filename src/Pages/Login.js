@@ -7,7 +7,6 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
-    const [loginMessage, setLoginMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +19,7 @@ export default function Login() {
     return (
         <div className='login-section'>
             <h1>Login</h1>
-            <p>{loginMessage}</p>
+            
             <form onSubmit={handleSubmit}>
                 <input
                     type='email'
