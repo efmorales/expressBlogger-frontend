@@ -54,6 +54,18 @@
   font-size: 24px;
 }
 
+.login-link {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.register-link {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
